@@ -1,7 +1,16 @@
-"use client";
+'use client'
 
-import * as React from "react";
+import * as React from 'react'
 
-export const Button = () => {
-  return <button onClick={() => alert("boop")}>Boop</button>;
-};
+interface IButtonProps {
+	className: string
+	children: React.ReactNode
+}
+
+export const Button: React.FC<IButtonProps> = ({ className, children }) => {
+	return (
+		<button className={className} onClick={() => alert('boop')}>
+			{children}
+		</button>
+	)
+}
