@@ -1,11 +1,9 @@
-import { Button } from 'ui'
+import { Button } from 'shadcn-ui'
 export default function Home() {
 	return (
 		<main className="mt-20 w-2/3 mx-auto">
-			<h1 className="text-2xl mb-2">Hello World</h1>
-			<Button className="bg-primary-700 text-secondary-100 p-2 rounded-md">
-				Click Me!
-			</Button>
+			<h1 className="text-2xl mb-2 text-primary-600">Hello World</h1>
+			<Button variant="secondary">Button</Button>
 		</main>
 	)
 }

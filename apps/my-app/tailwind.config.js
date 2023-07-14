@@ -1,5 +1,5 @@
 const colors = require('tailwindcss/colors')
-const sharedConfig = require('tailwind-config/tailwind.config.js')
+const sharedConfig = require('shadcn-ui/tailwind.config.js')
 
 module.exports = {
 	presets: [sharedConfig],
