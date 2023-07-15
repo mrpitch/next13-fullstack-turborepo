@@ -1,20 +1,19 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "ui:add": "pnpm --filter ui ui:add"
-  },
-  "devDependencies": {
-    "@turbo/gen": "^1.9.7",
-    "@types/node": "20.4.1",
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "workspace:*",
-    "prettier": "^2.5.1",
-    "turbo": "latest"
-  },
-  "packageManager": "pnpm@7.15.0",
-  "name": "next13-fullstack-turborepo"
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"lint": "turbo run lint",
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"nuke": "rm -r node_modules; for d in */*/node_modules; do echo $d; rm -r $d; done"
+	},
+	"devDependencies": {
+		"@turbo/gen": "^1.9.7",
+		"eslint": "8.44.0",
+		"eslint-config-custom": "workspace:*",
+		"prettier": "latest",
+		"turbo": "latest"
+	},
+	"packageManager": "pnpm@7.15.0",
+	"name": "next13-fullstack-turborepo"
 }
