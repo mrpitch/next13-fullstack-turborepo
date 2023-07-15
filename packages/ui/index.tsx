@@ -6,6 +6,6 @@ export {
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
-} from './components/accordion'
-export { Avatar, AvatarFallback, AvatarImage } from './components/avatar'
-export { Button, buttonVariants } from './components/button'
+} from './src/components/accordion'
+export { Avatar, AvatarFallback, AvatarImage } from './src/components/avatar'
+export { Button, buttonVariants } from './src/components/button'
