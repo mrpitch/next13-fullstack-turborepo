@@ -1,14 +1,16 @@
-/** @type {import('tailwindcss').Config} */
-//const colors = require('tailwindcss/colors')
-//const defautTheme = require('tailwindcss/defaultTheme')
+import { Config } from 'tailwindcss'
 
-module.exports = {
+//import colors from 'tailwindcss/colors'
+import { fontFamily } from 'tailwindcss/defaultTheme'
+import animatePlugin from 'tailwindcss-animate'
+import { overrideStylesPlugin } from './src/lib/overrideStylesPlugin'
+import { defaultStyles } from './src/styles/styles'
+
+const styles = overrideStylesPlugin(defaultStyles)
+
+export const sharedConfig = {
 	darkMode: ['class', '[data-mode="dark"]'],
-	content: [
-		'./src/app/**/*.{js,ts,jsx,tsx}',
-		'./src/components/**/*.{js,ts,jsx,tsx}',
-		'../../packages/ui/src/**/*.{js,ts,jsx,tsx}',
-	],
+	content: [],
 	theme: {
 		container: {
 			center: true,
@@ -58,14 +60,17 @@ module.exports = {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)',
 			},
+			fontFamily: {
+				sans: ['var(--font-sans)', ...fontFamily.sans],
+			},
 			keyframes: {
 				'accordion-down': {
-					from: { height: 0 },
+					from: { height: '0' },
 					to: { height: 'var(--radix-accordion-content-height)' },
 				},
 				'accordion-up': {
 					from: { height: 'var(--radix-accordion-content-height)' },
-					to: { height: 0 },
+					to: { height: '0' },
 				},
 			},
 			animation: {
@@ -74,5 +79,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('tailwindcss-animate')],
-}
+	plugins: [animatePlugin],
+} satisfies Config

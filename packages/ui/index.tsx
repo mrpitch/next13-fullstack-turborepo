@@ -1,4 +1,6 @@
 export { cn } from './src/lib/utils'
+//export { overrideStylesPlugin } from './src/lib/overrideStylesPlugin'
+//export { sharedConfig } from './tailwind.config'
 
 // Components export
 export {

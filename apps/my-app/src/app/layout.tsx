@@ -1,8 +1,11 @@
-import '@/lib/styles/globals.css'
 import { Metadata } from 'next'
 
-import { siteConfig } from '@/config/site'
 import { cn } from 'ui'
+
+import { siteConfig } from '@/config/site'
+import { fontSans } from '@/lib/fonts'
+import '@/lib/styles/globals.css'
+
 import { ThemeStoreInitializer } from '@/components/ThemeStoreInitializer'
 import { SiteHeader } from '@/components/SiteHeader'
 
@@ -39,7 +42,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
 				className={useThemeStore.getState().theme}
 			>
 				<head />
-				<body className={cn('min-h-screen font-sans antialiased')}>
+				<body
+					className={cn(
+						'min-h-screen font-sans antialiased',
+						fontSans.variable
+					)}
+				>
 					<div className="relative flex min-h-screen flex-col">
 						<SiteHeader />
 						<div className="flex-1">{children}</div>
