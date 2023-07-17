@@ -1,4 +1,4 @@
-import * as React from 'react'
+export { cn } from './src/lib/utils'
 
 // Components export
 export {
