@@ -10,16 +10,15 @@ export function ThemeStoreInitializer() {
 
 	useEffect(() => {
 		//check OS theme setting & listen to changes
-		const isDarkTheme = () =>
-			window.matchMedia('(prefers-color-scheme: dark)').matches
+		const media = window.matchMedia('(prefers-color-scheme: dark)')
+		const isDarkTheme = () => media.matches
 
-		window
-			.matchMedia('(prefers-color-scheme: dark)')
-			.addEventListener('change', ({ matches }) => {
-				useThemeStore.setState((state) => ({
-					theme: matches ? 'dark' : 'light',
-				}))
-			})
+		media.addEventListener('change', ({ matches }) => {
+			useThemeStore.setState((state) => ({
+				theme: matches ? 'dark' : 'light',
+			}))
+		})
+		media.removeEventListener
 
 		//initialize client side store
 		if (!initialized.current) {
