@@ -1,4 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next 13 Fullstack Apps
+
+This is a bboilerplate uses next.js, tailwindcss, radixui / shadecn, prisma, auth.js
+
+## Prerequisites
+
+add `.env` file to root directory of your app and add the follwing
+
+```.env
+# time to revalidate for ISR, 0 for SSG
+NEXT_PUBLIC_TIME_TO_REVALIDATE=0
+
+# AUTH js needs url and secret
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=supersecretstring
+
+# if using oAuth provider
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_ID=
+GITHUB_SECRET=
+```
 
 ## Getting Started
 
@@ -12,20 +33,17 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Next.js docs](https://nextjs.org/docs)
+- [Tailwindcss docs](https://tailwindcss.com/docs/installation)
+- [shadcn ui docs](https://ui.shadcn.com/docs)
+- [Radix docs](https://www.radix-ui.com/docs/primitives/overview/introduction)
+- [Radix Icons docs](https://icons.radix-ui.com/)
+- [Prisma docs](https://www.prisma.io/docs)
+- [Zustand docs](https://docs.pmnd.rs/zustand/getting-started/introduction)
+- [Auth.js](https://authjs.dev/)
+- [Tailwindcss Cheat Sheet](https://tailwindcomponents.com/cheatsheet/)
 
 ## Deploy on Vercel
 
