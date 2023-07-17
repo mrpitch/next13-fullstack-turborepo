@@ -3,6 +3,7 @@
 	"scripts": {
 		"build": "turbo run build",
 		"dev": "turbo run dev",
+		"start": "turbo run start",
 		"lint": "turbo run lint",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
 		"nuke": "rm -r node_modules; for d in */*/node_modules; do echo $d; rm -r $d; done"
