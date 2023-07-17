@@ -2,10 +2,10 @@ import { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 import { sharedConfig } from 'ui/tailwind.config'
 import { overrideStylesPlugin } from 'ui/src/lib/overrideStylesPlugin'
-//import { styles } from './src/lib/styles/styles'
-import { defaultStyles } from 'ui/src/styles/styles'
+import { styles } from './src/lib/styles/styles'
+//import { defaultStyles } from 'ui/src/styles/styles'
 
-const styles = overrideStylesPlugin(defaultStyles)
+const appStyles = overrideStylesPlugin(styles)
 const config = {
 	presets: [sharedConfig],
 	content: [
@@ -22,7 +22,7 @@ const config = {
 			},
 		},
 	},
-	plugins: [styles],
+	plugins: [appStyles],
 } satisfies Config
 
 export default config

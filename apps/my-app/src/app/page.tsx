@@ -72,7 +72,7 @@ export default function Home() {
 				</Accordion>
 			</div>
 			<pre className="mt-8">
-				{JSON.stringify(resolvedConfig.plugins, null, 2)}
+				{JSON.stringify(resolvedConfig.theme.extend, null, 2)}
 			</pre>
 		</section>
 	)
