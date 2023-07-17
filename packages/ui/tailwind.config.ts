@@ -3,10 +3,6 @@ import { Config } from 'tailwindcss'
 //import colors from 'tailwindcss/colors'
 import { fontFamily } from 'tailwindcss/defaultTheme'
 import animatePlugin from 'tailwindcss-animate'
-import { overrideStylesPlugin } from './src/lib/overrideStylesPlugin'
-import { defaultStyles } from './src/styles/styles'
-
-const styles = overrideStylesPlugin(defaultStyles)
 
 export const sharedConfig = {
 	darkMode: ['class', '[data-mode="dark"]'],

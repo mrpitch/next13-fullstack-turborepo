@@ -1,3 +1,23 @@
+const primary = {
+	'--hue': '107',
+	'--saturation': '68%',
+	'--lightness': '41%',
+}
+const color = {
+	'--ColorPrimary100': `${primary['--hue']} ${primary['--saturation']} calc(${primary['--lightness']}+ 30%)`,
+	'--ColorPrimary200': '106 49% 49%',
+	'--ColorPrimary300': '105 46% 55%',
+	'--ColorPrimary400': '104 46% 62%',
+	'--ColorPrimary500': '103 47% 68%',
+	'--ColorPrimary600': '102 47% 75%',
+	'--ColorSurface100': '0 0% 7%',
+	'--ColorSurface200': '0 0% 16%',
+	'--ColorSurface300': '0 0% 25%',
+	'--ColorSurface400': '0 0% 34%',
+	'--ColorSurface500': '0 0% 44%',
+	'--ColorSurface600': '0 0% 55%',
+}
+
 export const styles = {
 	':root': {
 		'--background': '0 0% 100%',
@@ -10,8 +30,8 @@ export const styles = {
 		'--input': '214.3 31.8% 91.4%',
 		'--card': '0 0% 100%',
 		'--card-foreground': '222.2 47.4% 11.2%',
-		'--primary': '313 47.4% 11.2%',
-		'--primary-foreground': '210 40% 98%',
+		'--primary': color['--ColorPrimary100'],
+		'--primary-foreground': color['--ColorPrimary600'],
 		'--secondary': '210 40% 96.1%',
 		'--secondary-foreground': '222.2 47.4% 11.2%',
 		'--accent': '210 40% 96.1%',
@@ -34,8 +54,8 @@ export const styles = {
 		'--input': '216 34% 17%',
 		'--card': '224 71% 4%',
 		'--card-foreground': '213 31% 91%',
-		'--primary': '313 61% 37%',
-		'--primary-foreground': '222.2 47.4% 1.2%',
+		'--primary': color['--ColorSurface200'],
+		'--primary-foreground': color['--ColorPrimary500'],
 		'--secondary': '222.2 47.4% 11.2%',
 		'--secondary-foreground': '210 40% 98%',
 		'--destructive': '0 63% 31%',
