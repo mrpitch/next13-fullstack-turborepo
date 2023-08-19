@@ -1,12 +1,17 @@
+'use client'
+import { useState } from 'react'
+
 import Link from 'next/link'
 
 import { siteConfig } from '@/config/site'
 import { buttonVariants } from 'ui'
-import { Icons } from '@/components/Icons'
+import { DrawerNav } from 'ui'
+import { Icons } from 'ui'
 import { MainNav } from '@/components/MainNav'
 import { ThemeToggle } from '@/components/ThemeToggle'
 
 export function SiteHeader() {
+	const [open, setOpen] = useState(false)
 	return (
 		<header className="bg-background sticky top-0 z-40 w-full border-b">
 			<div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
@@ -44,6 +49,7 @@ export function SiteHeader() {
 							</div>
 						</Link>
 						<ThemeToggle />
+						<DrawerNav open={open} setOpen={setOpen} />
 					</nav>
 				</div>
 			</div>

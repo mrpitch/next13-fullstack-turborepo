@@ -3,10 +3,11 @@ import Link from 'next/link'
 
 import { siteConfig } from '@/config/site'
 import { cn } from 'ui'
-import { Icons } from '@/components/Icons'
+
+import { Icons } from 'ui'
 
 interface INavItem {
-	title: string
+	label: string
 	href?: string
 	disabled?: boolean
 	external?: boolean
@@ -36,7 +37,7 @@ export function MainNav({ items }: IMainNavProps) {
 										item.disabled && 'cursor-not-allowed opacity-80'
 									)}
 								>
-									{item.title}
+									{item.label}
 								</Link>
 							)
 					)}

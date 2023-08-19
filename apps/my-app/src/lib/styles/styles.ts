@@ -1,12 +1,14 @@
 const primary = {
 	'--hue': '107',
 	'--saturation': '68%',
-	'--lightness': '41%',
+	'--lightness': 41,
 }
 const color = {
-	'--ColorPrimary100': `${primary['--hue']} ${primary['--saturation']} calc(${primary['--lightness']}+ 30%)`,
-	'--ColorPrimary200': '106 49% 49%',
-	'--ColorPrimary300': '105 46% 55%',
+	'--ColorPrimary100': `${primary['--hue']} ${primary['--saturation']} ${primary['--lightness']}%`,
+	'--ColorPrimary200': `${primary['--hue']} ${primary['--saturation']} ${
+		primary['--lightness'] + 10
+	}%`,
+	'--ColorPrimary300': 'hsl(105 46% 55%)',
 	'--ColorPrimary400': '104 46% 62%',
 	'--ColorPrimary500': '103 47% 68%',
 	'--ColorPrimary600': '102 47% 75%',
@@ -30,7 +32,7 @@ export const styles = {
 		'--input': '214.3 31.8% 91.4%',
 		'--card': '0 0% 100%',
 		'--card-foreground': '222.2 47.4% 11.2%',
-		'--primary': color['--ColorPrimary100'],
+		'--primary': color['--ColorPrimary200'],
 		'--primary-foreground': color['--ColorPrimary600'],
 		'--secondary': '210 40% 96.1%',
 		'--secondary-foreground': '222.2 47.4% 11.2%',
